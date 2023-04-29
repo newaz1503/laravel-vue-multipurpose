@@ -26,10 +26,13 @@
   <link rel="stylesheet" href="{{asset('assets/admin/plugins/')}}/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="{{asset('assets/admin/plugins/')}}/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}" defer>
   @yield('css')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
   <!-- Navbar -->
   @include('admin.include.header')
@@ -40,7 +43,9 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-        @yield('content')
+        {{-- @yield('content') --}}
+        <router-view></router-view>
+        <vue-progress-bar></vue-progress-bar>
   </div>
   <!-- /.content-wrapper -->
   @include('admin.include.footer')

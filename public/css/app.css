@@ -10768,3 +10768,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.router-link-exact-active {
+  background-color: blueviolet !important;
+  color: #fff !important;
+}
